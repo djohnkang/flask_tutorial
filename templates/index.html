@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hey</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>게시판</h1>
+        <p>게시판입니다.</p>
+        <form action="/create">
+            <input type="text" name="title">
+            <input type="content" name="content">
+            <input type="submit">
+        </form>
+        {% for post in posts %}
+            <div>
+                <p>제목 : {{ post.title }}</p>
+                <p>내용 : {{ post.content }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
